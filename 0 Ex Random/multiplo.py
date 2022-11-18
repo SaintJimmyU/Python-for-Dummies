@@ -12,5 +12,5 @@ def imprime_multiplos(numero):
             print(f"{i},", end="")
 
 numero = 66
-print(f"Los Multiplos de {numero} son")
+print(f"Los Multiplos del numero {numero} son: ")
 imprime_multiplos(numero)
