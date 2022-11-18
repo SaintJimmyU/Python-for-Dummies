@@ -1,0 +1,16 @@
+"""enumerate --> Asigna un indice a cada elemento de un objeto iterable"""
+
+nombres = ["Jimmy", "Paola", "Jenny", "Ursula"]
+nombres_enumerables = enumerate(nombres) #indice parte sin especificar por defecto desde 0
+print(list(nombres_enumerables)) 
+
+nombres_enumerables = enumerate(nombres,5) #indice parte especificando desde el numero 5
+print(list(nombres_enumerables))
+
+for indice, elemento in enumerate(nombres):
+    print(indice,elemento) #indice Iterado parte sin especificar por defecto desde 0
+
+for indice, elemento in enumerate(nombres,5):
+    print(indice,elemento) #indice Iterado parte especificando desde el numero 5
+
+    

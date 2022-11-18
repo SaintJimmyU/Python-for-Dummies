@@ -1,0 +1,21 @@
+"""
+lista = [expresion(elemento) for elemento in objeto_iterable]
+"""
+
+def calcular_cuadrado(numero):
+    return numero**2
+
+lista_numeros = [1,2,3,4,5,6,7,8,9,10]
+lista_cuadrados = []
+
+for num in lista_numeros:
+    cuadrado = num**2
+    lista_cuadrados.append(cuadrado)
+
+print("Ciclo for",lista_cuadrados)
+
+list_comprehension = [num**2 for num in lista_numeros]
+print("List Comprehension",list_comprehension)
+
+list_comprehension = [calcular_cuadrado(num) for num in lista_numeros]
+print("List Comprehension con funcion",list_comprehension)

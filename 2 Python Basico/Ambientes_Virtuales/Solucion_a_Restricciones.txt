@@ -1,0 +1,25 @@
+1. Instalamos el ambiente virtual virtualenv con "pip install virtualenv"
+
+2. Creamos el ambiente con la instruccion virtualenv + nombre del ambiente --> "virtualenv env"
+
+3. Para levantar un ambiente se utiliza:
+    .\env\Scripts\activate
+
+4. Cuando no levanta un ambiente y sale un error como este:
+    .\env\Scripts\activate : File E:\Python (Practica)\Python Basico\Ambientes_Virtuales\env\Scripts\activate.ps1 cannot be        
+    loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at 
+    https:/go.microsoft.com/fwlink/?LinkID=135170.
+    At line:1 char:1
+    + .\env\Scripts\activate
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+    ______________________________________
+    Se soluciona con los siguientes Pasos:
+        1. Abrir Power Shell como Administrador
+        2. Revisar el estado de Restriccion con "Get-ExecutionPolicy"
+        3. En Caso de estar "Restricted" quitaremos la restriccion con "Set-ExecutionPolicy Unrestrict"
+        4. Revisamos nuevamente el estado con "Get-ExecutionPolicy" y ahora deberia mostrar "Unrestrict"
+        5. Probamos levantar el ambien el cual deberia estar ya listo.
+
+5. Para desactivar el ambiente utilizamos "deactivate"
+6. Para rmeover(eliminar) un ambiente utilizamos "rmdir env" o "rmdir en /s"

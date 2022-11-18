@@ -1,0 +1,8 @@
+lista_numeros = [6,2,4]
+
+iterador = iter(lista_numeros)
+print(iterador)
+print(next(iterador)) # Presenta el Valor del Primero de la Lista que es 6
+print(next(iterador)) # Presenta el Valor del Segundo de la Lista que es 2
+print(next(iterador)) # Presenta el Valor del Tercero de la Lista que es 4
+print(next(iterador)) # Aqui ocurre un error de limite 

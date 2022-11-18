@@ -1,0 +1,16 @@
+import json
+
+persona = {
+    "nombre": "Jimmy",
+    "apellido": "Uruchima",
+    "edad": 42
+}
+
+""" Crear Archivo JSON Serializado """
+# objeto_json = json.dumps(persona, indent=2)
+# with open ("persona.json","w") as archivo_json:
+#     archivo_json.write(objeto_json)
+
+""" Crear Archivo JSON Sin Serializar """
+with open ("persona.json","w") as archivo_json:
+    json.dump(persona,archivo_json)

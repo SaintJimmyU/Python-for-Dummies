@@ -1,0 +1,13 @@
+lista_nombres = ["Jimmy", "Paola", "Jenny", "Ursula"]
+
+for nombre in lista_nombres:
+    print(nombre)
+else:
+    print("CILO TERMINADO")
+
+for nombre in lista_nombres:
+    print(nombre)
+    if nombre == "Jenny":
+        break        
+else:
+    print("CILO TERMINADO")

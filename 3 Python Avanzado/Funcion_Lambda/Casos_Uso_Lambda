@@ -1,0 +1,16 @@
+"""CASO lambda con filer"""
+# "filter" evalua la condicion definida.
+# Al combinar con la funcion "list" devuelve solo lo que cumplio la evalucion de "filter"
+
+lista_numeros = [1,2,3,4,5,3,7,8]
+
+lista_pares = list(filter(lambda numero: numero %2 == 0, lista_numeros))
+print(lista_pares)
+
+
+"""CASO lambda con map"""
+# "map" mapea o barre ejecutando la operacion definida
+# Al combinar con la funcion "list" devuelve el resultado de la ejecucion de map
+
+lista_pares = list(map(lambda numero: numero*10 , lista_numeros))
+print(lista_pares)

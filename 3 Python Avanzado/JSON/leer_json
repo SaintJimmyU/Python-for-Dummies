@@ -1,0 +1,9 @@
+import json
+
+""" Leer o Deserializar """
+with open("persona.json","r") as archivo_json:
+    datos_json = json.load(archivo_json)
+
+print(type(datos_json)) # Presentamos el Tipo de Dato del Archivo
+print(datos_json) # Presentamos Todo el Contenido
+print(datos_json["nombre"]) #  # Presentamos el Valor del objero mediante la Llave  

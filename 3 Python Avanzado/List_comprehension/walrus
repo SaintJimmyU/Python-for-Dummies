@@ -1,0 +1,41 @@
+from faulthandler import cancel_dump_traceback_later
+
+
+def calcular_cuadrado(numero):
+    return numero **2
+
+lista_num = [1,2,3,4,5,6,7,8,9,10]
+
+lista_pares = []
+
+for num in lista_num:
+    cuadrado = calcular_cuadrado(num)
+    if num % 2 ==0:
+        lista_pares.append(cuadrado)
+        print(f"El Cuadrado de {num} es {cuadrado}, {num} es PAR")
+    else:
+        print(f"El Cuadrado de {num} es {cuadrado}, {num} es IMPAR")
+
+print(lista_pares)
+
+# La diferencia entre el anterior bloque y el siguiente es 
+# la integracion de la Funcion calcular_cuadrado(num) en el if
+    
+lista_pares = []
+
+for num in lista_num:
+    # cuadrado = calcular_cuadrado(num)
+    if (cuadrado := calcular_cuadrado(num)) % 2 ==0:
+        lista_pares.append(cuadrado)
+        print(f"El Cuadrado de {num} es {cuadrado}, {num} es PAR")
+    else:
+        print(f"El Cuadrado de {num} es {cuadrado}, {num} es IMPAR")
+
+print(lista_pares)
+
+# La diferencia entre los anteriores bloques y el siguiente es 
+# la utilizacion de walrus iterable en una sola linea
+# esto sin el else
+
+pares_comprehension = [cuadrado for num in lista_num if (cuadrado := calcular_cuadrado(num)) %2 ==0]
+print(f"Usando walrus {pares_comprehension}")

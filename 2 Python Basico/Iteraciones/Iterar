@@ -1,0 +1,20 @@
+Lista1 = ["Jimmy","Maria","AnaGym"]
+for elemento in Lista1:
+    print(elemento)
+
+print("------------------------")
+
+Lista1 = ["Jimmy","Maria","AnaGym"]
+for index in range(len(Lista1)):
+    print("Indice: ",index)
+    print("Valor: ",Lista1[index])
+
+print("------------------------")
+
+Lista2 = ["Jimmy","Maria","AnaGym"]
+
+i = 0
+while i < len(Lista2):
+    print("Indice: ",i)
+    print("Valor: ",Lista2[i])
+    i += 1

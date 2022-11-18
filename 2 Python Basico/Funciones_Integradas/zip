@@ -1,0 +1,141 @@
+''' FUNCION zip()
+La función zip devuelve un iterador de tuplas, en el que la tupla i-ésima está formada por
+los elementos que ocupan dicha posición en los iteradores cedidos como argumentos. 
+El iterador para cuando se han procesado todos los elementos del iterador más corto.
+Si no se incluyen argumentos, la función devuelve un iterador vacío. Si se añade como 
+argumento un único iterador, se devuelve un iterador de tuplas de un elemento.
+Se garantiza el orden de los iteradores en el resultado.
+La función zip usada en conjunto con el operador * puede ser usada para extraer 
+los iteradores originales a partir del iterador devuelto por zip (véase ejemplo más adelante).
+'''
+# Usada sin argumentos, la función zip devuelve un iterador vacío:
+i = zip()
+print(type(i))
+print(i)
+
+# Si el argumento es una única lista, la función devuelve un iterador formado por tuplas de un elemento:
+print("------------------------") 
+
+i = zip([1,2,3])
+print(list(i))
+
+# for x in zip(i):
+#     print(x)
+
+# Usada con dos iteradores como argumentos, devuelve un iterador formado por tuplas de uno y otro iterador de entrada
+print("------------------------") 
+
+lista1 = ["Lunes","Martes","Miercoles"]
+lista2 = [12,13,14]
+i = zip(lista1,lista2)
+print(list(i))
+
+print("------------------------")
+
+# Iterando las Listas para darle un formato distinto añadiendo un indice ordenado utilizando la funcion "enumerate" 
+lista1 = ["Lunes","Martes","Miercoles"]
+lista2 = [12,13,14]
+for i,(dia,numero) in enumerate(zip(lista1,lista2)):
+    print(i,dia,numero)
+
+print("------------------------")
+
+# Pueden usarse más de dos iteradores como argumentos:
+lista1 = ["Lunes","Martes","Miercoles"]
+lista2 = [12,13,14]
+lista3 = ["XXX",9999,"+"]
+i = zip(lista1,lista2,lista3)
+print(list(i))
+
+print("------------------------")
+
+# Es posible recuperar los iteradores originales con formato de tuplas usando zip(*iterador):
+lista1 = ["Lunes","Martes","Miercoles"]
+lista2 = [12,13,14]
+lista3 = ["XXX",9999,"+"]
+i = zip(lista1,lista2,lista3)
+lista1,lista2,lista3 = zip(*i)
+print(lista1,lista2,lista3)
+
+print("------------------------")
+
+# Si los iteradores de entrada tienen diferente longitud, la función se para cuando se han procesado los elementos del iterador de entrada más corto:
+lista1 = ["Lunes","Martes","Miercoles"]
+lista2 = [12,13]
+i = zip(lista1,lista2)
+print(list(i))
+
+print("------------------------")
+
+# Iterado de zip para encolumnar
+lista1 = ["Lunes","Martes","Miercoles"]
+lista2 = [12,13,14]
+i = zip(lista1,lista2)
+
+for dato in i:
+    print(list(dato))
+
+print("------------------------")
+
+# Iterado de zip para agrupar con 3 listas
+lista1 = ["Jimmy","Ana","Jenny"]
+lista2 = [42,25,9]
+lista3 = ["Agosto","Abril","Enero"]
+i = zip(lista1,lista2,lista3)
+
+for a,b,c in i:
+    print(f"Nombre: {a} | Edad: {b} | Mes: {c}")
+
+
+print("------------------------")
+
+# Convertir zip a Diccionario
+lista1 = ["Lunes","Martes","Miercoles"]
+lista2 = [12,13,14]
+dato = dict(zip(lista1,lista2))
+
+print(dato)
+
+print("------------------------")
+
+# Agruapar zip con range
+lista1 = ["Lunes","Martes","Miercoles","Jueves","Viernes"]
+lista2 = [12,13,14,15,16]
+lista3 = range(1,8)
+grupos = zip(lista1,lista2,lista3)
+
+for g in grupos:
+    print(g)
+
+print("------------------------")
+
+# EJERCICIO:
+# Crear un diccionario cuyas claves sean los nombres de los alumnos,
+# y cuyas notas sean el promedio de las 3 notas 
+# y convertido en Diccionario donde Nombre es la Clave y el promedio es el valor
+nombres = ["Jimmy","Ana","Jenny","Maria","Adam"]
+nota1 = [8,7,9,8,10]
+nota2 = [10,10,9,9,9]
+nota3 = [6,5,9,7,8]
+
+promedio = {}
+for nom,n1,n2,n3 in zip(nombres,nota1,nota2,nota3):
+    promedio[nom] = [(n1+n2+n3)/3]
+
+promedio = dict(zip(nombres,promedio))
+
+for alumno,nota in promedio.items():
+    print(f"Alumno: {alumno} | Nota: {nota}")
+
+    
+print("---- CONVIRTIENDO LO ANTERIOR EN DICCIONARIO CON LIST COMPREHENSION ----")
+
+nombres = ["Jimmy","Ana","Jenny","Maria","Adam"]
+nota1 = [8,7,9,8,10]
+nota2 = [10,10,9,9,9]
+nota3 = [6,5,9,7,8]
+
+promedio = {nom: (n1+n2+n3)/3 for nom,n1,n2,n3 in zip(nombres,nota1,nota2,nota3)}
+
+for alumno,nota in promedio.items():
+    print(f"Alumno: {alumno} | Nota: {nota}")

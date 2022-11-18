@@ -1,0 +1,10 @@
+lista_num = [1,2,3,8,2,5,6,7,4,9,0]
+
+# List_comprehension tambien se puede utilizar para crear set de datos
+set_pares = {num for num in lista_num if num % 2==0}
+print(set_pares)
+
+# List_comprehension tambien se puede utilizar para crear set de datos pero como DICCIONARIO DE DATOS
+vocales = "aeiou"
+diccionario = {vocal.lower(): vocal.upper() for vocal in vocales}
+print(diccionario)

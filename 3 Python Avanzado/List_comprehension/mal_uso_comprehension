@@ -1,0 +1,36 @@
+# Caso 1
+# (Aqui se crea una lista iterable, hacer esto ocupa mas memoria)
+total = sum([num for num in range(100)])
+
+# Correccion
+# Iterar de manera tradicional con for evitamos el uso innecesario de crear un lista que ocupa memoria
+total = sum(num for num in range(100))
+
+# -------------------------------------------------------------------------------------------------------
+
+# Caso 2
+# (Al igual que el ejemplo anterior se crea una lista que ocupa memoria)
+[print(element) for element in range(10)]
+
+# Correcion
+# (Lo ideal seria utilizar el tradicional for )
+for element in range(10):
+    print(element)
+
+# -------------------------------------------------------------------------------------------------------
+
+# Caso 3
+# (Innecesaria creacion de lista por cada elemento. Tiende a dificultad en la lectura)
+lista_anidada = [[1,2], [3,4], [5,6]]
+
+valores_lista = [numero for elemento in lista_anidada for numero in elemento]
+print(valores_lista)
+
+# Correccion
+# (Utilizar el metodo tradicional de los ciclos anidados para la extraccion de la informacion)
+valores_lista = []
+for elemento2 in lista_anidada:
+    for numero2 in elemento2:
+        valores_lista.append(numero2)
+
+print(valores_lista)

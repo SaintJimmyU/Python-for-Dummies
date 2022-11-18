@@ -1,0 +1,5 @@
+def Parametros_Ordenados(nombre,apellido,*args,**kwargs):
+    pass
+
+def Parametros_Dedordenados(nombre,apellido,**kwargs,*args):
+    pass

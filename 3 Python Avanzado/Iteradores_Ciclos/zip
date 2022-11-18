@@ -1,0 +1,14 @@
+"""zip --> Crea un Objeto iterable"""
+
+nombres = ["Jimmy", "Paola", "Jenny"]
+apellidos = ["Uruchima", "Marmolejo", "Garcia"]
+
+nombres_completos = list(zip(nombres,apellidos))
+print(nombres_completos)
+
+nombres_unzip, apellidos_unzip = zip(*nombres_completos)
+print(nombres_unzip)
+print(apellidos_unzip)
+
+for nombre, apellido in zip(nombres,apellidos):
+    print(nombre,apellido)

@@ -1,0 +1,27 @@
+def Funcion1(lado,unidad):
+    perimetro = lado * 4
+
+    print(f"El Perimetro de {lado} es {perimetro} {unidad}")
+
+Funcion1(25,"Metros") # Llamada a la Funcion pasando los parametros segun el orden definido en la Funcion
+Funcion1(unidad="Centimetros",lado=30) # Llamada a la Funcion pasando los parametros sin importar el orden definido en la Funcion
+
+def calcular_cuadrado(lado):
+    '''Para entender el Proposito y Contenido de una funcion o metodo utilizamos DOCSTRING.
+
+    DOCSTRING permite añadir bloque de comentarios
+
+    Args:
+        lado (int): por Ejemplo Describimos en esta seccion los Argumentos
+        
+    Returns:
+        perimetro (int): Retorna el Perimetro
+        area (i8nt): Retorna el Area
+    '''
+    perimetro = lado * 4
+    area = lado * lado
+    return perimetro, area
+
+per, are = calcular_cuadrado(lado = 6)
+print(f"El Perimetro es : {per} y el Area es : {are}")
+print(calcular_cuadrado(8)) 

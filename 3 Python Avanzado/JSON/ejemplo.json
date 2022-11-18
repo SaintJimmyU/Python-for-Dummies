@@ -1,0 +1,21 @@
+{
+    "Tipo_string": "Texto",
+    "Tipo_entero": 42,
+    "Tipo_decimal": 23.08,
+    "Tipo_boolean_1": true,
+    "Tipo_boolean_2": false,
+    "Tipo_nulo": null,
+    "Tipo_array": [1,2,3],
+    "Tipo_objeto":{
+        "nombre": "Ana"
+    },
+    "Tipo_array_de_Objetos":[
+        {
+            "nombre": "Jimmy"
+        },
+        {
+            "nombre": "Colombia"
+        }
+    ]
+    
+}

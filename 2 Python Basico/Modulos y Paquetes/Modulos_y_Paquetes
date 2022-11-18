@@ -1,0 +1,11 @@
+# import datetime # Importa Libreria
+# import datetime as dt # Importa Libreria pero le podemos añadir un alias utilizando "as"
+
+from datetime import datetime as dt # Usando "from" podemos invocar un unico submodulo o funcion de una libreria
+
+# hora_actual = datetime.datetime.now()
+# hora_actual = dt.datetime.now()
+
+hora_actual = dt.now()
+
+print(hora_actual)

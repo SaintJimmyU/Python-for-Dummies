@@ -1,0 +1,12 @@
+def separar_par_impar(lista_numeros):
+    pares=[]
+    impares=[]
+    for numero in lista_numeros:
+        if numero %2 == 0:
+            pares.append(numero)
+            # print("Pares = " + str(pares))
+        else:
+            impares.append(numero)
+            # print("Impares = " + str(impares))
+    return pares, impares
+

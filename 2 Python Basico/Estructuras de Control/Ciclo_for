@@ -1,0 +1,41 @@
+for letra in "Texto":
+    print(letra)
+
+print("------------------------")
+
+Lista1 = ["Jimmy","Maria","AnaGym"]
+for elemento in Lista1:
+    print(elemento)
+
+print("------------------------")
+
+Lista2 = ["Jimmy","Maria","AnaGym"]
+for elemento in Lista2:
+    print(elemento)
+    break
+
+print("------------------------")
+
+Lista3 = ["Jimmy","Maria","AnaGym"]
+for elemento in Lista3:
+    print(elemento)
+    if elemento == "Maria":
+        break
+
+print("------------------------")
+
+Lista4 = ["Jimmy","Maria","AnaGym"]
+for elemento in Lista4:
+    if elemento == "Jimmy":
+        continue
+    print(elemento)
+
+print("------------------------")
+
+for i in range(5):
+    print(i)   
+
+print("------------------------")
+
+for i in range(2,5):
+    print(i)   

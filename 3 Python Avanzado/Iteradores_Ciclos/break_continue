@@ -1,0 +1,16 @@
+"""break --> Sale del ciclo y de la iteracion"""
+nombres = ["Jimmy","Paola","Jenny"]
+
+for elemento in nombres:
+    if elemento == "Paola":
+        break
+    print(elemento)
+
+
+"""continue --> Salta la iteracion actual pero no del ciclo y continua con las demas iteraciones del ciclo"""
+nombres = ["Jimmy","Paola","Jenny"]
+
+for elemento in nombres:
+    if elemento == "Paola":
+        continue
+    print(elemento)

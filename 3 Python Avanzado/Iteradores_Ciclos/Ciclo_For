@@ -1,0 +1,5 @@
+"""Sintaxys Basica Ciclo FOR"""
+nombres = ["Jimmy","Paola","Jenny"]
+
+for elemento in nombres:
+    print(elemento)

@@ -1,0 +1,26 @@
+
+    ACTUALIZAR: pip
+    INSTRUCCIONES:
+        1. Revisar version del pip
+            pip --version
+        2. Actualizar version del pip
+            py -m pip install --upgrade pip
+
+    ACTUALIZAR: Todas las Aplicaciones
+    INSTRUCCIONES:
+        1. Instalar el paquete "pip-review"
+            pip install pip-review
+        2. Comando para actualizar todos los paquetes
+            pip-review --local --interactive
+
+    INSTALAR: Instalar un paquete de una version en especifico
+    INSTRUCCIONES:
+        pip install NOMBRE_DEL_PAQUETE==VERSION
+        pip install pandas==1.3.4
+
+    INSTRUCCIONES:
+        Devuelve la lista de Paquetes instalados
+            pip freeze
+        
+        Desinstalar un paquete
+            pip uninstall pandas

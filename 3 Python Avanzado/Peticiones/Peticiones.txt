@@ -1,0 +1,10 @@
+PETICIONES
+
+Comprender:
+* HTTP (Protocolo de Transferencia de Datos que permite la comunicacion entre servicios)
+* HTTPS (La version segura de HTTP`)
+* API (Conjunto de Protocoles y Funciones que permite la comunicacion entre servicios)
+
+* Libreria de Python "Requests" que permite hacer peticiones HTTP
+    se la instala usando "pip install requests"
+

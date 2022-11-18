@@ -1,0 +1,25 @@
+Diccionario1 = {
+    "Nombre ":"Jimmy",
+    "Apellido ":"Uruchima",
+    "Pais":"Ecuador"
+}
+    
+
+for llave in Diccionario1:
+    print("Llave : ",llave)
+    print("Valor : ",Diccionario1[llave])
+
+print("------------------------")
+
+for elemento in Diccionario1.keys():
+    print("Llave : ",elemento)
+
+print("------------------------")
+
+for elemento in Diccionario1.values():
+    print("Valor : ",elemento)
+    
+print("------------------------")
+
+for llave,valor in Diccionario1.items():
+    print("Llave : ",llave," | Valor : ",valor)
