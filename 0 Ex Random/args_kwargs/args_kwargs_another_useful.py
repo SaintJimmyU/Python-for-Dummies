@@ -8,6 +8,7 @@ func(*[10,20,30])
 func(**{'x':1,'y':2,'z':3})
 func(*[10,20,30],**{'x':1,'y':2,'z':3})
 
+# -----------------------------------------------------------------
 
 ''' AHORA APLICANDOLO CON DESEMPAQUETADO E ITERANDOLO (--> esto se corrio en REPL <--)
 
