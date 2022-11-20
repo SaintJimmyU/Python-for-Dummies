@@ -9,7 +9,7 @@ func(**{'x':1,'y':2,'z':3})
 func(*[10,20,30],**{'x':1,'y':2,'z':3})
 
 
-''' AHORA APLICANDOLO CON DESEMPAQUETADO E ITERANDOLO -- esto se corrio en REPL
+''' AHORA APLICANDOLO CON DESEMPAQUETADO E ITERANDOLO --> esto se corrio en REPL <--
 
 Python provides an awesome variety of sequential data structures. The most common of them are list and tuple. These sequences are sometimes used to store records, which later needs to be unpacked.
 
